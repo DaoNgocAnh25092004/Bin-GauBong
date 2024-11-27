@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../Icon/fontawesome-free-6.4.2-web/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="../Css/main.css">
+  <link rel="stylesheet" href="../Css/reponsive.css">
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url(../Img/Background/1.jpg) no-repeat center fixed;
+      background-size: cover;
+    }
+
+    .container {
+      transform: scale(1.2);
+    }
+
+    .over__lay--login {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: -99;
+    }
+
+    .err {
+      color: red;
+      margin: 20px 0 0 10px;
+      font-size: 1.3rem;
+    }
+
+    @media only screen and (max-width: 740px) {
+      .container {
+        transform: scale(0.9);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="over__lay--login"></div>
+
+  <div class="container">
+    <div class="heading">Sign Up</div>
+    <form action="" class="form">
+      <input class="input username" type="text" placeholder="Username">
+      <span class="err err-username"></span>
+      <input class="input password" type="password" placeholder="Password">
+      <span class="err err-password"></span>
+      <input class="input confirm-password" type="password" placeholder="Enter the Password">
+      <span class="err err-enter__password"></span>
+      <input class="input phone" type="text" placeholder="Phone">
+      <span class="err err-phone"></span>
+      <input class="login-button signup-btn" type="button" value="Sign In">
+
+    </form>
+
+    <span class="agreement">Bạn đã có tài khoản? <a href="../Html/signin.html">Đăng Nhập</a></span>
+    <span class="agreement"><a href="../Html/index.html">Quay lại trang chủ</a></span>
+
+  </div>
+  <script src="../Js/signup.js"></script>
+</body>
+
+</html>

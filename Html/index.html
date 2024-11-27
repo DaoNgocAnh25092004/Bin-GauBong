@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNAS SHOP</title>
+    <link rel="stylesheet" href="../Icon/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="../Css/main.css">
+    <link rel="stylesheet" href="../Css/reponsive.css">
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="header__left">
+            <img src="../Img/Logo/1.jpg" alt="">
+        </div>
+        <div class="header__center">
+            <div class="header__center__home title__header__index">
+                <a href="">Trang chủ</a>
+            </div>
+            <div class="header__center__product">
+                <a href="../Html/thubong.html">Thú bông</a>
+            </div>
+            <div class="header__center__event">
+                <a href="../Html/sitemap.html">Sitemap</a>
+            </div>
+            <div class="header__center__cinema--price">
+                <a href="../Html/gioithieu.html">Giới thiệu</a>
+            </div>
+        </div>
+        <div class="header__right">
+            <div class="header__right__search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="header__right__user">
+                <i class="fa-regular fa-user"></i>
+                <div>
+                    <div class="name__user--login">
+                    </div>
+                    <button class="btn__logout hide">
+    
+                        <div class="btn__logout--sign"><svg viewBox="0 0 512 512">
+                                <path
+                                    d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z">
+                                </path>
+                            </svg></div>
+    
+                        <div class="btn__logout--text">Logout</div>
+                    </button>
+
+                </div>
+            </div>
+            <div class="header__right__cart">
+                <i class="fa-solid fa-cart-plus"></i>
+                <span class="quality__product">0</span>
+            </div>
+            <div class="header__menu--mobile">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </div>
+        </div>
+        <div class="header__center__mobile--close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="overlay"></div>
+    </header>
+
+    <div class="showCart">
+        <div class="showCart-header__cover">
+            <div class="showCart-header">
+                <div>
+                    <h2 style="color: aqua;"><span>0</span> sản phẩm</h2>
+                </div>
+                <div>
+                    <h1>Giỏ Hàng</h1>
+                </div>
+                <div>
+                    <h2 class="showCart-header_close">Đóng</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="showCart-none hide">
+            <div class="loader__cart"></div>
+            <p>Hiện chưa có sản phẩm</p>
+        </div>
+        <div id="mycart"></div>
+        <div class="showCart-footer">
+            <div class="showCart-footer--into__money">
+                <h2>TỔNG TIỀN:</h2>
+                <p>0₫</p>
+            </div>
+            <div class="showCart-footer--button">
+                <div class="btn-conteiner">
+                    <a class="btn-content" href="#">
+                        <span class="btn-title">Thanh Toán</span>
+                        <span class="icon-arrow">
+                            <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <path id="arrow-icon-one"
+                                        d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+                                        fill="#FFFFFF"></path>
+                                    <path id="arrow-icon-two"
+                                        d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+                                        fill="#FFFFFF"></path>
+                                    <path id="arrow-icon-three"
+                                        d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+                                        fill="#FFFFFF"></path>
+                                </g>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="over__lay hide"></div>
+
+    <div class="slider">
+        <div class="slider__img--item">
+            <img src="../Img/Slider/1.webp" alt="">
+        </div>
+        <div class="slider__img--item">
+            <img src="../Img/Slider/2.jpg" alt="">
+        </div>
+        <div class="slider__img--item">
+            <img src="../Img/Slider/3.jpg" alt="">
+        </div>
+        <div class="slider__img--item">
+            <img src="../Img/Slider/4.jpg" alt="">
+        </div>
+        <div class="slider__img--item">
+            <img src="../Img/Slider/5.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="title__home--page padding__screen margin__top">
+        <h1>GANAS - SHOP GẤU BÔNG ĐẸP VÀ CAO CẤP TẠI HÀ NỘI - TPHCM</h1>
+        <div>
+            <img src="../Img/Title/1.png" alt="">
+        </div>
+    </div>
+
+    <h1 class="title--list padding__screen margin__top">Best Seller Của GNAS SHOP</h1>
+    <div id="product__list" class="padding__screen margin__top ">
+        <div class="product__item zoom show-on-scroll" data-id="1">
+            <div class="product__item--img">
+                <div class="product__item--img__detail">
+                    <div class="product__item--img__detail--container">
+                        <div>
+                            <i class="fa-solid fa-ticket"></i>
+                            <p>Mua gấu</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="../Img/Product/Product1/1.jpg" alt="">
+            </div>
+            <div class="product__item--footer">
+                <p class="product__item--name">Heo Helu Bông</p>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+        </div>
+        <div class="product__item zoom show-on-scroll" data-id="2">
+            <div class="product__item--img">
+                <div class="product__item--img__detail">
+                    <div class="product__item--img__detail--container">
+                        <div>
+                            <i class="fa-solid fa-ticket"></i>
+                            <p>Mua gấu</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="../Img/Product/Product2/1.jpg" alt="">
+            </div>
+            <div class="product__item--footer">
+                <p class="product__item--name">Thỏ Bông Áo Len</p>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+        </div>
+        <div class="product__item zoom show-on-scroll" data-id="3">
+            <div class="product__item--img">
+                <div class="product__item--img__detail">
+                    <div class="product__item--img__detail--container">
+                        <div>
+                            <i class="fa-solid fa-ticket"></i>
+                            <p>Mua gấu</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="../Img/Product/Product4/1.jpg" alt="">
+            </div>
+            <div class="product__item--footer">
+                <p class="product__item--name">Mèo Bông Mắt Biết</p>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+        </div>
+        <div class="product__item zoom show-on-scroll" data-id="4">
+            <div class="product__item--img">
+                <div class="product__item--img__detail">
+                    <div class="product__item--img__detail--container">
+                        <div>
+                            <i class="fa-solid fa-ticket"></i>
+                            <p>Mua gấu</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="../Img/Product/Product3/1.jpg" alt="">
+            </div>
+            <div class="product__item--footer">
+                <p class="product__item--name">Gấu Trúc Baby Ôm Tim</p>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer__detail padding__screen margin__top">
+            <div class="footer__detail__introduce">
+                <h3>Giới thiệu</h3>
+                <ul>
+                    <li>Về chúng tôi</li>
+                    <li>Thỏa thuận sử dụng</li>
+                    <li>Quy chế hoạt động</li>
+                    <li>Chính sách bảo mật</li>
+                </ul>
+
+            </div>
+            <div class="footer__detail__film--angle">
+                <h3>Góc điện ảnh</h3>
+                <ul>
+                    <li>Thể loại gấu</li>
+                    <li>Bình luận gấu</li>
+                    <li>Blog điện ảnh</li>
+                </ul>
+
+            </div>
+            <div class="footer__detail__support">
+                <h3>Hỗ trợ</h3>
+                <ul>
+                    <li>Góp ý</li>
+                    <li>Sale & Services</li>
+                    <li>Tuyển dụng</li>
+                </ul>
+
+            </div>
+            <div class="footer__detail__logo">
+                <div class="footer__detail__logo--main">
+                    <img src="../Img/Logo/1.jpg" alt="">
+                </div>
+                <div class="footer__detail__logo--tooltip">
+                    <div class="footer__tooltip facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span class="tooltip__name">Facebook</span>
+                    </div>
+                    <div class="footer__tooltip github">
+                        <i class="fa-brands fa-github"></i>
+                        <span class="tooltip__name">Github</span>
+                    </div>
+                    <div class="footer__tooltip instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span class="tooltip__name">Instagram</span>
+                    </div>
+                    <div class="footer__tooltip youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                        <span class="tooltip__name">Youtube</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__adress padding__screen">
+            <h2>CÔNG TY CỔ PHẦN GNAS SHOP</h2>
+            <p>388 Xã Đàn, Đống Đa, Hà Nội</p>
+            <p>
+                <i class="fa-solid fa-mobile"></i> : <span>0866749042</span> -
+                <i class="fa-solid fa-phone"></i> : <span>1900 6789</span> -
+                <i class="fa-solid fa-envelope"></i> : <span>vansang12cb5@gmail.com
+                </span>
+            </p>
+        </div>
+    </footer>
+    <!-- Javascript-->
+    <script type="text/javascript" src="../Lib/JQUERY/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../Lib/slick-1.8.1/slick/slick.min.js"> </script>
+    
+    <script src="../Js/mobile.js"></script>
+    <script src="../Js/main.js"></script>
+    <script src="../Js/slider.js"></script>
+    <script src="../Js/showCart.js"></script>
+    <script src="../Js/namesSignIn.js"></script>
+</body>
+
+</html>

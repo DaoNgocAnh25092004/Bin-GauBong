@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNAS SHOP</title>
+    <link rel="stylesheet" href="../Icon/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="../Css/main.css">
+    <link rel="stylesheet" href="../Css/reponsive.css">
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="header__left">
+            <img src="../Img/Logo/1.jpg" alt="">
+        </div>
+        <div class="header__center">
+            <div class="header__center__home">
+                <a href="../Html/index.html">Trang chủ</a>
+            </div>
+            <div class="header__center__movie">
+                <a href="../Html/thubong.html">Thú bông</a>
+            </div>
+            <div class="header__center__event">
+                <a href="../Html/sitemap.html">Sitemap</a>
+            </div>
+            <div class="header__center__cinema--price">
+                <a href="../Html/gioithieu.html">Giới thiệu</a>
+            </div>
+        </div>
+        <div class="header__right">
+            <div class="header__right__search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="header__right__user">
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="header__right__cart">
+                <i class="fa-solid fa-cart-plus"></i>
+                <span class="quality__product">0</span>
+            </div>
+            <div class="header__menu--mobile">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </div>
+        </div>
+        <div class="header__center__mobile--close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="overlay"></div>
+    </header>
+
+    <div class="showCart">
+        <div class="showCart-header__cover">
+            <div class="showCart-header">
+                <div>
+                    <h2 style="color: aqua;"><span>0</span> sản phẩm</h2>
+                </div>
+                <div>
+                    <h1>Giỏ Hàng</h1>
+                </div>
+                <div>
+                    <h2 class="showCart-header_close">Đóng</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="showCart-none hide">
+            <div class="loader__cart"></div>
+            <p>Hiện chưa có sản phẩm</p>
+        </div>
+        <div id="mycart"></div>
+        <div class="showCart-footer">
+            <div class="showCart-footer--into__money">
+                <h2>TỔNG TIỀN:</h2>
+                <p>0₫</p>
+            </div>
+            <div class="showCart-footer--button">
+                <div class="btn-conteiner">
+                    <a class="btn-content" href="#">
+                        <span class="btn-title">Thanh Toán</span>
+                        <span class="icon-arrow">
+                            <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <path id="arrow-icon-one"
+                                        d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+                                        fill="#FFFFFF"></path>
+                                    <path id="arrow-icon-two"
+                                        d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+                                        fill="#FFFFFF"></path>
+                                    <path id="arrow-icon-three"
+                                        d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+                                        fill="#FFFFFF"></path>
+                                </g>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="over__lay hide"></div>
+    <div class="container__info padding__screen margin__top">
+        <div class="container__info--img">
+            <div class="container__info--img__main">
+                <img src="../Img/Product/Product8/1.jpg" alt="">
+            </div>
+            <div class="container__info--img__add">
+                <div>
+                    <img class="img-boder__info" src="../Img/Product/Product8/1.jpg" alt="">
+                </div>
+                <div>
+                    <img src="../Img/Product/Product8/2.jpg" alt="">
+                </div>
+                <div>
+                    <img src="../Img/Product/Product8/3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container__info--details">
+            <h1>Gấu Bông Teddy Bánh Kem</h1>
+            <div class="container__info--details__table--size">
+                <div>
+                    <h2>Size</h2>
+                    <p>60cm</p>
+                    <p>80cm</p>
+                    <p>100cm</p>
+                </div>
+                <div>
+                    <h2>Giá bán</h2>
+                    <p>350.000₫</p>
+                    <p>480.000₫</p>
+                    <p>720.000₫</p>
+                </div>
+            </div>
+            <div class="container__info--details__price">350.000₫</div>
+            <div class="container__info--details__size">
+                <p class="size__slect" value="350.000₫">60cm</p>
+                <p value="480.000₫">80cm</p>
+                <p value="720.000₫">100cm</p>
+            </div>
+            <button class="btn-comment btn__buy">Thêm Vào Giỏ Hàng</button>
+
+            <div class="container__info--details__policy">
+                <div>
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+                        <p>Gói Quà - Nén Nhỏ Gấu - Tặng Thiệp Miễn Phí</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+                        <p>Giao Hàng Nội Thành Siêu Tốc - Giao Đúng Giờ & Tận Tay</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+                        <p>Giao Hàng Toàn Quốc 2 - 5 Ngày - Nhận Hàng Mới Phải Trả Tiền</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+                        <p>Bảo Hành Đường Chỉ Vĩnh Viễn - Bảo Hành Bông Gấu 1 Năm</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+                        <p>Dịch Vụ Giặt Gấu & Vệ Sinh Gấu Tại Nhà Giá Rẻ</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-check"></i>
+                        <p>Dịch Vụ Giặt Gấu & Vệ Sinh Gấu Tại Nhà Giá Rẻ</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div id="title__main" class="padding__screen margin__top">
+        <div class="title__main__name ">Bình Luận</div>
+    </div>
+    <div id="comment" class="padding__screen margin__top">
+        <div>
+            <textarea placeholder="Nội dung bình luận(*)" name="" id="" cols="100" rows="10"></textarea>
+        </div>
+        <div class="comment--right">
+            <div class="comment__input-group">
+                <input required="" type="text" name="text" autocomplete="off" class="comment__input">
+                <label class="user-label">Họ tên (*)</label>
+            </div>
+            <div class="comment__input-group">
+                <input required="" type="text" name="text" autocomplete="off" class="comment__input">
+                <label class="user-label">Số điện thoại (*)</label>
+            </div>
+            <button class="btn-comment"> Bình Luận</button>
+        </div>
+    </div>
+
+    <div class="title__home--page padding__screen margin__top">
+        <h1>GNAS - SHOP GẤU BÔNG ĐẸP VÀ CAO CẤP TẠI HÀ NỘI - TPHCM</h1>
+        <div>
+            <img src="../Img/Title/1.png" alt="">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer__detail padding__screen margin__top">
+            <div class="footer__detail__introduce">
+                <h3>Giới thiệu</h3>
+                <ul>
+                    <li>Về chúng tôi</li>
+                    <li>Thỏa thuận sử dụng</li>
+                    <li>Quy chế hoạt động</li>
+                    <li>Chính sách bảo mật</li>
+                </ul>
+
+            </div>
+            <div class="footer__detail__film--angle">
+                <h3>Góc điện ảnh</h3>
+                <ul>
+                    <li>Thể loại gấu</li>
+                    <li>Bình luận gấu</li>
+                    <li>Blog điện ảnh</li>
+                </ul>
+
+            </div>
+            <div class="footer__detail__support">
+                <h3>Hỗ trợ</h3>
+                <ul>
+                    <li>Góp ý</li>
+                    <li>Sale & Services</li>
+                    <li>Tuyển dụng</li>
+                </ul>
+
+            </div>
+            <div class="footer__detail__logo">
+                <div class="footer__detail__logo--main">
+                    <img src="../Img/Logo/1.jpg" alt="">
+                </div>
+                <div class="footer__detail__logo--tooltip">
+                    <div class="footer__tooltip facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span class="tooltip__name">Facebook</span>
+                    </div>
+                    <div class="footer__tooltip github">
+                        <i class="fa-brands fa-github"></i>
+                        <span class="tooltip__name">Github</span>
+                    </div>
+                    <div class="footer__tooltip instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span class="tooltip__name">Instagram</span>
+                    </div>
+                    <div class="footer__tooltip youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                        <span class="tooltip__name">Youtube</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__adress padding__screen">
+            <h2>CÔNG TY CỔ PHẦN GNAS SHOP</h2>
+            <p>388 Xã Đàn, Đống Đa, Hà Nội</p>
+            <p>
+                <i class="fa-solid fa-mobile"></i> : <span>0866749042</span> -
+                <i class="fa-solid fa-phone"></i> : <span>1900 6789</span> -
+                <i class="fa-solid fa-envelope"></i> : <span>vansang12cb5@gmail.com
+                </span>
+            </p>
+        </div>
+    </footer>
+    <!-- Javascript -->
+    <script src="../Js/info.js"></script>
+    <script src="../Js/mobile.js"></script>
+    <script src="../Js/main.js"></script>
+    <script src="../Js/addProductCart.js"></script>
+</body>
+
+</html>
